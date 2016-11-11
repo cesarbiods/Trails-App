@@ -1,42 +1,39 @@
-Albion Cross Trail:NYS Rte. 13, Town of Albion:hiking
-Amboy 4H Environmental Education Center:NYS Rte. 183, Amboy:hiking
-Chateaugay State Forest:Co. Rtes. 2 and 50, Orwell:hiking
-Deer Creek Marsh:Rainbow Shores Road, Richland:hiking
-Derby Hill Bird Observatory:Sage Creek Road, Mexico:hiking
-Fallbrook Recreation Center:Thompson Rd., Oswego:hiking
-Great Bear Springs Recreation Area:City of Fulton and Town of Volney:hiking
-Happy Valley Wildlife Management Area:NYS Rte. 104, Albion, Williamstown; Co. Rte. 26, Parish, Amboy:hiking
-Hastings Town Park:Wilson Rd., Hastings:hiking
-Independence Park:Riker’s Beach Rd., Scriba:hiking
-Klondike State Forest:Amboy:hiking
-Littlejohn State Wildlife Management Area:Co. Rte. 17, Boylston and Redfield:hiking
-Mexico Point Park:Mexico Point Drive, Mexico:hiking
-Oswego County Forest Land:NYS Rte. 13 & Ball Rd., Williamstown:hiking
-Oswego County Nature Park at Camp Zerbe:NYS Rte. 104, Williamstown:hiking
-Oswego County Recreation Trail:Maple Avenue, Volney to NYS Rte. 49, Cleveland:hiking
-Oswego East and West Riverwalks:City of Oswego:hiking
-Rice Creek Biological Field Station:Thompson Road, Oswego State University:hiking
-Richard A. Noyes Bird Sanctuary:Nine Mile Point Rd., Town of New Haven:hiking
-Salmon River Falls Unique Area:Falls Road, Orwell:hiking
-Sage Creek Trail:County Rte. 41, Town of Mexico:hiking
-Salmon River State Forest:Co. Rtes. 2 & 17, Redfield:hiking
-Sandy Creek Community Park:U.S. Rte. 11, Sandy Creek:hiking
-Sandy Island Beach State Park:3387 Co. Rte. 15, Sandy Creek:hiking
-Selkirk Shores State Park:7101 NYS Rte. 3, Pulaski:hiking
-Sunset Bay Park:E. Lake Rd., Scriba:hiking
-Three Mile Bay/Big Bay State Wildlife Management Area:Off NYS Rte. 49, West Monroe and Constantia:hiking
-Trout Brook State Forest:Off Co. Rte. 22, Bremm Road, Sandy Creek and Boylston:hiking
-Winona State Forest Recreation Area:Center Road, Boylston:hiking
-Great Bear Springs Recreation Area:County Route 57, Fulton:biking
-Happy Valley Wildlife Management Area:NYS Route 104, Williamstown:biking
-Oswego County Recreation Trail:Maple Avenue, Volney to NYS Rte. 49, Cleveland:biking
-Rice Creek Biological Field Station:Thompson Road, Oswego State University:biking
-Selkirk Shores State Park:7101 NYS Rte. 3, Pulaski:biking
-Winona State Forest Recreation Area:Center Road, Boylston:biking
-OW Tunnel:Oswego Canal Park:walking
-Riverwalk Northeast:Oswego Canal Park:walking
-Breitbeck Park West:Oswego Canal Park:walking
-Fort Ontario:Oswego Canal Park:walking
-Harbor Rail Trail:Oswego Canal Park:walking
-Oswego Marina:Oswego Canal Park:walking
-Oswego Maritime District:Oswego Canal Park:walking
+Albion Cross Trail:43°29'12.2”N:75°58'17.8"W:hiking
+Amboy 4H Environmental Education Center:43°24’49.54’’N:75°54’20.37’’W:hiking
+Chateaugay State Forest:43.574219°N:75.961576°W:hiking
+Deer Creek Marsh:43°35'55.9”N:76°11'53.0"W:hiking
+Derby Hill Bird Observatory:43°31'40.7”N:76°14'20.6"W:hiking
+Fallbrook Recreation Center:43°25'28.0”N:76°32'21.9"W:hiking
+Great Bear Springs Recreation Area:43°15'57.1”N:76°21'05.8"W:hiking
+Happy Valley Wildlife Management Area:43°26'38.6”N:75°58'27.5"W:hiking
+Hastings Town Park:43°22'29.1"N:76°09'08.4"W:hiking
+Independence Park:43°30'06.7”N:76°26'52.5"W:hiking
+Klondike State Forest:43°22'11.8"N:75°59'02.6"W:hiking
+Littlejohn State Wildlife Management Area:43°38'45.5"N:75°52'52.7"W:hiking
+Mexico Point Park:43°31'21.6"N:76°15'33.4"W:hiking
+Oswego County Forest Land:43°26'01.7"N:75°54'37.7"W:hiking
+Oswego County Nature Park at Camp Zerbe:43°27'39.2"N:75°57'46.9"W:hiking
+Oswego County Recreation Trail:43°18'16.9"N:76°20'54.3"W:hiking
+Oswego East and West Riverwalks:43°27'17.2"N:76°30'32.7"W:hiking
+Rice Creek Biological Field Station:43°25'48.4"N:76°32'57.8"W:hiking
+Richard A. Noyes Bird Sanctuary:43°31'15.7"N:76°22'13.8"W:hiking
+Salmon River Falls Unique Area:43°32'57.0"N:75°56'34.0"W:hiking
+Sage Creek Trail:43°30'02.5"N:76°12'01.6"W:hiking
+Sandy Island Beach State Park:43°37'52.5"N:76°11'40.9"W:hiking
+Selkirk Shores State Park:43°33'51.9"N:76°12'27.4"W:hiking
+Three Mile Bay/Big Bay State Wildlife Management Area:43°15'30.8"N:76°07'27.7"W:hiking
+Trout Brook State Forest:43°36'46.0"N:75°59'25.5"W:hiking
+Winona State Forest Recreation Area:43°39'24.5"N:75°59'55.9"W:hiking
+Great Bear Springs Recreation Area:43°39'24.5"N:75°59'55.9"W:biking
+Happy Valley Wildlife Management Area:43°26'38.6”N:75°58'27.5"W:biking
+Oswego County Recreation Trail:43°18'16.9"N:76°20'54.3"W:biking
+Rice Creek Biological Field Station:43°25'48.4"N:76°32'57.8"W:biking
+Selkirk Shores State Park:43°33'51.9"N:76°12'27.4"W:biking
+Winona State Forest Recreation Area:43°39'24.5"N:75°59'55.9"W:biking
+OW Tunnel:43°27'28.0"N:76°30'18.7"W:walking
+Riverwalk Northeast:43°27'37.2"N:76°30'48.0"W:walking
+Breitbeck Park West:43°27'37.5"N:76°31'33.8"W:walking
+Fort Ontario:43°27'57.2"N:76°30'28.2"W:walking
+Harbor Rail Trail:43°27'10.2"N:76°30'33.7"W:walking
+Oswego Marina:43°27'42.6"N:76°31'04.3"W:walking
+Oswego Maritime District:43°27'42.7"N:76°30'52.6"W:walking
