@@ -6,15 +6,18 @@ package com.example.mikey.maps;
 
 public class Trail {
     String name;
-    int latitude;
-    int longtitude;
+    double latitude;
+    double longtitude;
+    Location location = new Location("");
     int rating;
     String type;
 
-    public Trail(String name,int latitude, int longtitude, String type){
+    public Trail(String name, double latitude, double longtitude, String type){
         this.name = name;
         this.latitude = latitude;
         this.longtitude = longtitude;
+        location.setLatitude(latitude);
+        location.setLongitude(longtitude);
         this.type = type;
     }
 
@@ -22,12 +25,16 @@ public class Trail {
         return this.name;
     }
 
-    public int getLatitude(){
+    public double getLatitude(){
         return this.latitude;
     }
 
-    public int getLongtitude(){
+    public double getLongtitude(){
         return this.longtitude;
+    }
+
+    public Location getLocation(){
+        return this.location;
     }
 
     public void setRating(int rating){
