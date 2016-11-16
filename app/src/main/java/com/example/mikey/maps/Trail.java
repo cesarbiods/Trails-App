@@ -25,33 +25,31 @@ public class Trail {
     }
 
     private void setLocation(String latitude, String longtitude){
-        String orentation;
+        char orentation;
         //latitude parsing
         String[] latTokens = latitude.split("°");
         String newLat = latTokens[0] + "." + latTokens[1];
-        latTokens = newLat.split("'");
-        newLat = latTokens[0] + latTokens[1];
-        latTokens = newLat.split("\"");
-        orentation = latTokens[1];
-        newLat = latTokens[0];//this adds the lat without the last decmial
-        latTokens = newLat.split(".");
-        newLat = latTokens[0];
-        if(orentation == "S"){
+        latTokens = newLat.split("\\'");
+        System.out.println("latTokens index 0 "+ latTokens[0]);
+        newLat = latTokens[0]+latTokens[1];//this adds the lat without the last decmial
+        latTokens = newLat.split("\\.");
+        newLat = latTokens[0] + "." + latTokens[1];
+        orentation = latTokens[2].charAt(latTokens[2].length()-1);
+        if(orentation == 'S'){
             newLat = "-" + newLat;
         }
         location.setLatitude(Double.parseDouble(newLat));
-
         //longitude parsing
         String[] longTokens = longtitude.split("°");
         String newLong = longTokens[0] + "." + longTokens[1];
         longTokens = newLong.split("'");
         newLong = longTokens[0] + longTokens[1];
-        longTokens = newLong.split("\"");
-        orentation = longTokens[1];
-        newLong = longTokens[0];//this adds the lat without the last decmial
-        longTokens = newLong.split(".");
-        newLong = longTokens[0];
-        if(orentation == "W"){
+        longTokens = newLong.split("\\.");
+        //orentation = longTokens[1];
+        newLong = longTokens[0] + "." + longTokens[1];
+        //newLong = longTokens[0];//this adds the lat without the last decmial
+        orentation = longTokens[2].charAt(longTokens[2].length()-1);
+        if(orentation == 'W'){
             newLong = "-" + newLong;
         }
         location.setLongitude(Double.parseDouble(newLong));
