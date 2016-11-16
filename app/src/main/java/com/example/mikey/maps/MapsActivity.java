@@ -18,6 +18,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
@@ -45,7 +46,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
+        TrailsList trails = new TrailsList(this);
+        ArrayList<Trail> trailList = trails.getTrailList();
+        //trailList.get(0);
         // Add a marker in Sydney and move the camera
         //LatLng oswego = new LatLng(43.4553, -76.5105);
         //mMap.addMarker(new MarkerOptions().position(oswego).title("Oswego, NY"));
