@@ -38,7 +38,9 @@ public class Trail {
         if(orentation == 'S'){
             newLat = "-" + newLat;
         }
+        System.out.println("new lat to be stored "+Double.parseDouble(newLat));
         location.setLatitude(Double.parseDouble(newLat));
+        this.latitude = Double.parseDouble(newLat);
         //longitude parsing
         String[] longTokens = longtitude.split("°");
         String newLong = longTokens[0] + "." + longTokens[1];
@@ -52,7 +54,9 @@ public class Trail {
         if(orentation == 'W'){
             newLong = "-" + newLong;
         }
+        System.out.println("new long to be stored " + Double.parseDouble(newLong));
         location.setLongitude(Double.parseDouble(newLong));
+        this.longtitude = Double.parseDouble(newLong);
     }
     public double getLatitude(){
         return this.latitude;
