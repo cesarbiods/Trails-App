@@ -5,13 +5,20 @@
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <fragment
+        android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="408dp"
+    android:layout_height="513dp"
+    tools:context="com.example.mikey.maps.MapsActivity" />
+
     <LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
 
         <EditText
-        android:layout_width="147dp"
+        android:layout_width="154dp"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:hint="Search for trail"
@@ -20,25 +27,25 @@
 
         <Button
         android:text="Search"
-        android:layout_width="104dp"
+        android:layout_width="135dp"
         android:layout_height="wrap_content"
         android:id="@+id/button4"
         android:onClick="onSearch" />
 
         <Button
             android:text="Map Type"
-            android:layout_width="103dp"
+            android:layout_width="117dp"
             android:onClick="changeType"
             android:layout_height="wrap_content"
             android:id="@+id/Btype" />
 
     </LinearLayout>
 
-    <fragment
-        android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
-    android:layout_width="387dp"
-    android:layout_height="484dp"
-    tools:context="com.example.mikey.maps.MapsActivity" />
+    <Button
+        android:text="Options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:onClick="listOptions"/>
 
 </LinearLayout>

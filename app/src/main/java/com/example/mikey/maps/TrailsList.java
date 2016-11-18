@@ -36,6 +36,7 @@ public class TrailsList {
                 fields = line.split(":");
                 trails.add(new Trail(fields[0],fields[1],fields[2],fields[3]));
             }
+            System.out.println("trails first location " + trails.get(0).getLatitude() + ", " + trails.get(0).getLongtitude());
             // Always close files.
             bufferedReader.close();
         } catch(FileNotFoundException ex) {
@@ -51,6 +52,8 @@ public class TrailsList {
         }
     }
     public ArrayList<Trail> getTrailList(){
+        System.out.println("trails size " + trails.size());
+        //System.out.println("trails first location " + trails.get(0).getLatitude() + ", " + trails.get(0).getLongtitude());
         return this.trails;
     }
 }
