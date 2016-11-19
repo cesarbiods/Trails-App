@@ -34,8 +34,9 @@ tools:context="com.example.mikey.maps.optionsList">
         android:layout_height="wrap_content"
         android:layout_marginTop="66dp"
         android:id="@+id/button8"
+        android:text="Weather"
         android:layout_below="@+id/button7"
         android:layout_alignStart="@+id/button7"
-        android:text="Notes" />
+        android:onClick="weatherClick" />
 
 </RelativeLayout>
