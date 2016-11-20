@@ -53,15 +53,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(oswego, zoomLevel));
 
         TrailsList trails = new TrailsList(this);
-        ArrayList<Trail> trailList = trails.getTrailList();
+        DatabaseOperations data = new DatabaseOperations(this);
+        List<Trail> trailList = trails.getTrailList();
         LatLng a = new LatLng(trailList.get(0).getLatitude(), trailList.get(0).getLongtitude());
-        //System.out.println("Latitude" + trailList.get(1).getLatitude());
-        //System.out.println("Longitude" + trailList.get(1).getLongtitude());
-        mMap.addMarker(new MarkerOptions().position(a).title(trailList.get(0).name));
+        System.out.println("Latitude" + trailList.get(1).getLatitude());
+        System.out.println("Longitude" + trailList.get(1).getLongtitude());
+       // mMap.addMarker(new MarkerOptions().position(a).title(trailList.get(0).name));
         for(Trail x: trailList){
+            System.out.println("adding " + x.getName() + " trail");
             mMap.addMarker(new MarkerOptions().position(new LatLng(x.getLatitude(), x.getLongtitude())).title(x.getName()));
         }
-
+        System.out.println("trail list length " + trailList.size());
 
         // Add a marker in Sydney and move the camera
         //LatLng oswego = new LatLng(43.4553, -76.5105);
