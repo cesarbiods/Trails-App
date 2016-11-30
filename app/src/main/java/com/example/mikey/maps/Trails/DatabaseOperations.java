@@ -74,7 +74,7 @@ public class DatabaseOperations extends SQLiteOpenHelper {
         values.put(TRAIL_NAME, trail.getName());
         values.put(TRAIL_LATITUDE, trail.getLatitude());
         values.put(TRAIL_LONGITUDE, trail.getLongtitude());
-        values.put(TRAIL_ACTIVITY, trail.getType());
+        values.put(TRAIL_ACTIVITY, trail.getType().toString());
         values.put(TRAIL_DESCRIPTION, trail.getDescription());
 
         //inserting row
@@ -137,7 +137,7 @@ public class DatabaseOperations extends SQLiteOpenHelper {
         values.put(TRAIL_NAME, trail.getName());
         values.put(TRAIL_LATITUDE, trail.getLatitude());
         values.put(TRAIL_LONGITUDE, trail.getLongtitude());
-        values.put(TRAIL_ACTIVITY, trail.getType());
+        values.put(TRAIL_ACTIVITY, trail.getType().toString());
         values.put(TRAIL_DESCRIPTION, trail.getDescription());
 
         // updating row

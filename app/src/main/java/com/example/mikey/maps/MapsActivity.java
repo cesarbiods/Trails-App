@@ -54,6 +54,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng oswego = new LatLng(43.4553, -76.5105);
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(oswego, zoomLevel));
 
+
         TrailsList trails = new TrailsList(this);
         DatabaseOperations data = new DatabaseOperations(this);
         List<Trail> trailList = trails.getTrailList();

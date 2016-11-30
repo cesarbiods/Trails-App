@@ -12,19 +12,19 @@ public class Trail {
     double longtitude;
     Location location = new Location("");
     int rating;
-    String type;
+    String[] type;
     String description;
 
     public Trail(String name, String latitude, String longtitude, String type){
         this.name = name;
         setLocation(latitude,longtitude);
-        this.type = type;
+        this.type = type.split(",");
         this.description = " ";
     }
     public Trail(String name, String latitude, String longtitude, String type, String description){
         this.name = name;
         setLocation(latitude,longtitude);
-        this.type = type;
+        this.type = type.split(",");
         this.description = description;
     }
 
@@ -32,7 +32,7 @@ public class Trail {
         this.name = name;
         this.latitude = latitude;
         this.longtitude = longtitude;
-        this.type = type;
+        this.type = type.split(",");
         this.description = " ";
     }
 
@@ -41,7 +41,7 @@ public class Trail {
         this.name = name;
         this.latitude = latitude;
         this.longtitude = longtitude;
-        this.type = type;
+        this.type = type.split(",");
         this.description = description;
     }
 
@@ -51,6 +51,15 @@ public class Trail {
     }
 
     private void setLocation(String latitude, String longtitude){
+
+        location.setLatitude(Double.parseDouble(latitude));
+        this.latitude = Double.parseDouble(latitude);
+
+
+        location.setLongitude(Double.parseDouble(longtitude));
+
+        this.longtitude = Double.parseDouble(longtitude);
+        /*
         char orentation;
         //latitude parsing
         //System.out.println(latitude);
@@ -88,6 +97,8 @@ public class Trail {
         System.out.println(longtitude);
         System.out.println(Double.parseDouble(newLong));
         this.longtitude = Double.parseDouble(newLong);
+        */
+
     }
     public double getLatitude(){
         return this.latitude;
@@ -109,7 +120,7 @@ public class Trail {
         return this.rating;
     }
 
-    public String getType(){
+    public String[] getType(){
         return this.type;
     }
 

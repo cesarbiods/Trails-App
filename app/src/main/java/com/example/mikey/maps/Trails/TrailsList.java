@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 
 /**
  * Created by Workstation2.0 on 11/9/2016.
@@ -37,22 +38,25 @@ public class TrailsList {
             // Always wrap FileReader in BufferedReader.
             //BufferedReader bufferedReader = new BufferedReader(fileReader);
             lineCount = 0;
-            while ((line = bufferedReader.readLine()) != null) {
-                if(Integer.parseInt(line) != dop.getDatabase_version()) {
+            line = bufferedReader.readLine();
+            if(Integer.parseInt(line)!= dop.getDatabase_version()) {
+                System.out.println("New database version");
+                System.out.println("trails size before " + dop.getTrailsCount());
+                SQLiteDatabase db = dop.getWritableDatabase();
+                dop.onUpgrade(db, dop.getDatabase_version(), Integer.parseInt((line)));
+                System.out.println("trails size after " + dop.getTrailsCount());
+                while ((line = bufferedReader.readLine()) != null) {
                     fields = line.split(":");
                     Trail tempTrail = new Trail(fields[0], fields[1], fields[2], fields[3], " ");
-                    if (dop.containsTrail(tempTrail)) {
-                        dop.updateTrail(tempTrail);
-                    } else {
-                        dop.addTrail(tempTrail);
-                    }
+                    System.out.println("adding trail " + line);
+                    dop.addTrail(tempTrail);
+
                     //trails.add(new Trail(fields[0],fields[1],fields[2],fields[3]));
-                    bufferedReader.close();
-                }
-                else{
-                    bufferedReader.close();
+
+
                 }
             }
+
 
 
             //System.out.println("trails first location " + trails.get(0).getLatitude() + ", " + trails.get(0).getLongtitude());
