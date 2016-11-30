@@ -1,13 +1,13 @@
-package com.example.mikey.maps;
+package com.example.mikey.maps.Trails;
 
-import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.design.widget.TabLayout;
 import android.util.Log;
+
+import com.example.mikey.maps.Trails.Trail;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +49,9 @@ public class DatabaseOperations extends SQLiteOpenHelper {
         Log.d("Database operations", "Database created");
     }
 
-
+    public int getDatabase_version(){
+        return database_version;
+    }
 
     public void onCreate(SQLiteDatabase sdb){
         sdb.execSQL(CREATE_QUERY);
@@ -68,7 +70,7 @@ public class DatabaseOperations extends SQLiteOpenHelper {
     public void addTrail(Trail trail) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        System.out.println("storing " + trail.getLatitude());
+        //System.out.println("storing " + trail.getLatitude());
         values.put(TRAIL_NAME, trail.getName());
         values.put(TRAIL_LATITUDE, trail.getLatitude());
         values.put(TRAIL_LONGITUDE, trail.getLongtitude());
@@ -104,7 +106,7 @@ public class DatabaseOperations extends SQLiteOpenHelper {
         // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
             do {
-                System.out.println("getting " + cursor.getString(1));
+                //System.out.println("getting " + cursor.getString(1));
                 Trail trail = new Trail(cursor.getString(0),Double.parseDouble(cursor.getString(1)),
                         Double.parseDouble(cursor.getString(2)),cursor.getString(3),
                         cursor.getString(4));

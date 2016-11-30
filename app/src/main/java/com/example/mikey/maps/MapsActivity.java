@@ -12,6 +12,9 @@ import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.EditText;
 
+import com.example.mikey.maps.Trails.DatabaseOperations;
+import com.example.mikey.maps.Trails.Trail;
+import com.example.mikey.maps.Trails.TrailsList;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -20,7 +23,6 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {

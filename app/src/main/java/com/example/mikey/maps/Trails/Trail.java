@@ -1,4 +1,4 @@
-package com.example.mikey.maps;
+package com.example.mikey.maps.Trails;
 
 import android.location.Location;
 
@@ -53,7 +53,7 @@ public class Trail {
     private void setLocation(String latitude, String longtitude){
         char orentation;
         //latitude parsing
-        System.out.println(latitude);
+        //System.out.println(latitude);
         String[] latTokens = latitude.split("°");
         String newLat = latTokens[0] + "." + latTokens[1];
         latTokens = newLat.split("\\'");
@@ -67,6 +67,8 @@ public class Trail {
         }
         //System.out.println("new lat to be stored "+Double.parseDouble(newLat));
         location.setLatitude(Double.parseDouble(newLat));
+        System.out.println(latitude);
+        System.out.println(Double.parseDouble(newLat));
         this.latitude = Double.parseDouble(newLat);
         //longitude parsing
         String[] longTokens = longtitude.split("°");
@@ -83,6 +85,8 @@ public class Trail {
         }
         //System.out.println("new long to be stored " + Double.parseDouble(newLong));
         location.setLongitude(Double.parseDouble(newLong));
+        System.out.println(longtitude);
+        System.out.println(Double.parseDouble(newLong));
         this.longtitude = Double.parseDouble(newLong);
     }
     public double getLatitude(){
