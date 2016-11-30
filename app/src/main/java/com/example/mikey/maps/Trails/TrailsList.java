@@ -1,9 +1,7 @@
-package com.example.mikey.maps;
+package com.example.mikey.maps.Trails;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -40,15 +38,20 @@ public class TrailsList {
             //BufferedReader bufferedReader = new BufferedReader(fileReader);
             lineCount = 0;
             while ((line = bufferedReader.readLine()) != null) {
-                fields = line.split(":");
-                Trail tempTrail = new Trail(fields[0],fields[1],fields[2],fields[3]," ");
-                if(dop.containsTrail(tempTrail)){
-                    dop.updateTrail(tempTrail);
+                if(Integer.parseInt(line) != dop.getDatabase_version()) {
+                    fields = line.split(":");
+                    Trail tempTrail = new Trail(fields[0], fields[1], fields[2], fields[3], " ");
+                    if (dop.containsTrail(tempTrail)) {
+                        dop.updateTrail(tempTrail);
+                    } else {
+                        dop.addTrail(tempTrail);
+                    }
+                    //trails.add(new Trail(fields[0],fields[1],fields[2],fields[3]));
+                    bufferedReader.close();
                 }
                 else{
-                    dop.addTrail(tempTrail);
+                    bufferedReader.close();
                 }
-                //trails.add(new Trail(fields[0],fields[1],fields[2],fields[3]));
             }
 
 
