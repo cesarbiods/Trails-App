@@ -8,37 +8,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.mikey.maps.Facebook.FacebookSharing"
-    android:background="@drawable/oc"
+    android:background="@drawable/oswegocounty"
     >
-
-
-    <com.facebook.share.widget.LikeView
-        android:background="#000"
-        android:id="@+id/likeView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/btnShare"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="31dp" />
-
-    <com.facebook.share.widget.ShareButton
-        android:id="@+id/fb_share_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginBottom="65dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Share..."
-        android:id="@+id/btnShare"
-        android:layout_column="0"
-        android:layout_alignBottom="@+id/fb_share_button"
-        android:layout_alignParentStart="true" />
 
     <TextView
         android:text="Like the Oswego County Facebook page, and share the Oswego County Hiking and Biking Page to Facebook"
@@ -50,6 +21,24 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="74dp" />
+
+    <com.facebook.share.widget.ShareButton
+        android:id="@+id/fb_share_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="69dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <com.facebook.share.widget.LikeView
+        android:background="#000"
+        android:id="@+id/likeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignTop="@+id/fb_share_button"
+        android:layout_alignParentEnd="true" />
 
 
 </RelativeLayout>
