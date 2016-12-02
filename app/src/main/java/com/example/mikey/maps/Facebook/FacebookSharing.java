@@ -42,28 +42,6 @@ public class FacebookSharing extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_facebook_sharing);
 
-        shareDialog = new ShareDialog(this);
-
-
-        //Another way to share content
-        btnShare = (Button) findViewById(R.id.btnShare);
-        btnShare.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (ShareDialog.canShow(ShareLinkContent.class)) {
-                    ShareLinkContent linkContent = new ShareLinkContent.Builder()
-                            .setContentTitle("Oswego County Trails")
-                            .setContentDescription("Oswego County Hiking and Biking Trails")
-                            .setContentUrl(Uri.parse("http://visitoswegocounty.com/the-great-outdoors/hiking-biking-trails/"))
-                            .setImageUrl(Uri.parse("http://visitoswegocounty.com/wp-content/themes/SimplePress/images/logo.png"))
-                            .build();
-
-                    shareDialog.show(linkContent);
-                }
-            }
-        });
-
-
 
 
         //Like
