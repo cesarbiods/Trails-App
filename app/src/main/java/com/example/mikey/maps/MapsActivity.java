@@ -6,9 +6,12 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.content.FileProvider;
 import android.view.View;
 import android.widget.EditText;
 
@@ -22,6 +25,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import com.facebook.FacebookSdk;
@@ -29,6 +33,7 @@ import com.facebook.FacebookSdk;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    static final int CAM_REQUEST = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,5 +124,33 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         startActivity(intent);
 
     }
+<<<<<<< HEAD
+
+    public void go (View view){
+        Intent camera_intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        Uri photoURI = FileProvider.getUriForFile(MapsActivity.this, BuildConfig.APPLICATION_ID + ".provider", getFile());
+        camera_intent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
+        startActivityForResult(camera_intent, CAM_REQUEST );
+    }
+
+    private File getFile(){
+        File folder = new File("sdcard/camera_app");
+
+        if(!folder.exists()){
+            folder.mkdir();
+        }
+
+        File image_file = new File(folder, "cam_image.jpg");
+
+        return image_file;
+    }
+
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        String path = "sdcard/camera_app/cam_image.jpg";
+//        imageView.
+//    }
+=======
     
+>>>>>>> refs/remotes/origin/master
 }
