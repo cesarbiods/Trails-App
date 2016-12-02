@@ -24,6 +24,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.IOException;
 import java.util.List;
+import com.facebook.FacebookSdk;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -118,4 +119,5 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         startActivity(intent);
 
     }
+    
 }
