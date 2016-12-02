@@ -8,35 +8,55 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.mikey.maps.Facebook.FacebookLogin"
     android:background="@drawable/gotland_2094">
+    <![CDATA[
 tools:context="com.example.mikey.maps.optionsList">
+
+
+
+
+
+    ]]>
+
 
     <Button
         android:text="Trails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
         android:id="@+id/button3"
         android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/button7"
+        android:layout_alignStart="@+id/button7" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button8"
+        android:text="Weather"
+        android:onClick="weatherClick"
+        android:layout_marginBottom="33dp"
+        android:layout_above="@+id/faceButton"
         android:layout_centerHorizontal="true" />
 
     <Button
         android:text="Profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="32dp"
         android:id="@+id/button7"
         android:layout_below="@+id/button3"
-        android:layout_alignStart="@+id/button3" />
+        android:layout_alignEnd="@+id/button8"
+        android:layout_alignStart="@+id/button8" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="66dp"
-        android:id="@+id/button8"
-        android:text="Weather"
-        android:layout_below="@+id/button7"
-        android:layout_alignStart="@+id/button7"
-        android:onClick="weatherClick" />
+        android:id="@+id/faceButton"
+        android:text="Facebook"
+        android:onClick="faceClick"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:elevation="0dp" />
 
 </RelativeLayout>

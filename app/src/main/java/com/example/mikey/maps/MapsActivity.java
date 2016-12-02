@@ -28,6 +28,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import com.facebook.FacebookSdk;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -123,6 +124,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         startActivity(intent);
 
     }
+<<<<<<< HEAD
 
     public void go (View view){
         Intent camera_intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -148,4 +150,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //        String path = "sdcard/camera_app/cam_image.jpg";
 //        imageView.
 //    }
+=======
+    
+>>>>>>> refs/remotes/origin/master
 }
