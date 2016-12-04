@@ -80,4 +80,9 @@ public class TrailsList {
         //System.out.println("trails first location " + trails.get(0).getLatitude() + ", " + trails.get(0).getLongtitude());
         return dop.getAllTrails();
     }
+    public List<Trail> getTrailList(String filter){
+        System.out.println("trails size " + dop.getTrailsCount());
+        //System.out.println("trails first location " + trails.get(0).getLatitude() + ", " + trails.get(0).getLongtitude());
+        return dop.getAllTrails(filter);
+    }
 }

@@ -119,6 +119,46 @@ public class DatabaseOperations extends SQLiteOpenHelper {
         return trailList;
 
     }
+    public List<Trail> getAllTrails(String paramiter){
+        List<Trail> trailList = new ArrayList<Trail>();
+        SQLiteDatabase db = this.getWritableDatabase();
+        if(paramiter.equals("A-Z")){
+            String selectQuery = "SELECT  * FROM " + TABLE_NAME;
+            Cursor cursor = db.query(TABLE_NAME,null, null, null, null, null, TRAIL_NAME);
+            if (cursor.moveToFirst()) {
+                do {
+                    //System.out.println("getting " + cursor.getString(1));
+                    Trail trail = new Trail(cursor.getString(0),Double.parseDouble(cursor.getString(1)),
+                            Double.parseDouble(cursor.getString(2)),cursor.getString(3),
+                            cursor.getString(4));
+                    // Adding contact to list
+                    trailList.add(trail);
+                } while (cursor.moveToNext());
+            }
+        }
+        else if(paramiter.equals("Z-A")){
+            String selectQuery = "SELECT  * FROM " + TABLE_NAME;
+            Cursor cursor = db.query(TABLE_NAME,null, null, null, null, null, TRAIL_NAME+"DESC");
+            if (cursor.moveToFirst()) {
+                do {
+                    //System.out.println("getting " + cursor.getString(1));
+                    Trail trail = new Trail(cursor.getString(0),Double.parseDouble(cursor.getString(1)),
+                            Double.parseDouble(cursor.getString(2)),cursor.getString(3),
+                            cursor.getString(4));
+                    // Adding contact to list
+                    trailList.add(trail);
+                } while (cursor.moveToNext());
+            }
+        }
+
+        // return contact list
+        return trailList;
+
+    }
+
+
+
+
     public int getTrailsCount() {
         String countQuery = "SELECT  * FROM " + TABLE_NAME;
         SQLiteDatabase db = this.getReadableDatabase();
