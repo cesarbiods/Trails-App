@@ -1,34 +1,36 @@
-2
-Albion Cross Trail:43.507750:-76.006333:hiking
-Amboy 4H Environmental Education Center:43.413761:-75.905658:hiking
-Chateaugay State Forest:43.601167:-75.964583:hiking
-Deer Creek Marsh:43.598861:-76.198056:hiking
-Derby Hill Bird Observatory:43.527972:-76.239056:hiking
-Fallbrook Recreation Center:43.424444:-76.539417:hiking
-Great Bear Springs Recreation Area:43.265861:-76.351611:hiking,biking
-Happy Valley Wildlife Management Area:43.444056:-75.974306:hiking,biking
-Hastings Town Park:43.374750:-76.152333:hiking
-Independence Park:43.501861:-76.447917:hiking
-Klondike State Forest:43.369944:-75.984056:hiking
-Littlejohn State Wildlife Management Area:43.645972:-75.881306:hiking
-Mexico Point Park:43.522667:-76.259278:hiking
-Oswego County Forest Land:43.433806:-75.910472:hiking
-Oswego County Nature Park at Camp Zerbe:43.460889:-75.963028:hiking
-Oswego County Recreation Trail:43.304694:-76.348417:hiking,biking
-Oswego East and West Riverwalks:43.454778:-76.509083:hiking
-Rice Creek Biological Field Station:43.430111:-76.549389:hiking,biking
-Richard A. Noyes Bird Sanctuary:43.521028:-76.370500:hiking
-Salmon River Falls Unique Area:43.549167:-75.942778:hiking
-Sage Creek Trail:43.500694:-76.200444:hiking
-Sandy Island Beach State Park:43.631250:-76.194694:hiking
-Selkirk Shores State Park:43.564417:-76.207611:hiking,biking
-Three Mile Bay/Big Bay State Wildlife Management Area:43.258556:-76.124361:hiking
-Trout Brook State Forest:43.612778:-75.990417:hiking
-Winona State Forest Recreation Area:43.656806:-75.998861:hiking,biking
-OW Tunnel:43.457778:-76.505194:walking
-Riverwalk Northeast:43.460333:-76.513333:walking
-Breitbeck Park West:43.460417:-76.526056:walking
-Fort Ontario:43.465889:-76.507833:walking
-Harbor Rail Trail:43.452833:-76.509361:walking
-Oswego Marina:43.462126:-76.517819:walking
-Oswego Maritime District:43.461861:-76.514611:walking
+3
+Albion Cross Trail:43.507750:-76.006333:hiking:This trail is 2.3 miles long and is a multi-use facility. It is also used by snowmobile and ATV users. The trail commences at the intersection of NYS Route 13 and trends northwest to the hamlet of Altmar.
+Amboy 4H Environmental Education Center:43.413761:-75.905658:hiking:3 miles hiking trails through 150 wooded acres. 3.5 miles north of Amboy Center. Cornell Cooperative Extension of Oswego County, 315-963-7286.
+Chateaugay State Forest:43.601167:-75.964583:hiking:Network of 7 miles marked trails and 8 miles unplowed roads for hiking and cross-country skiing. 7.5 miles east of Pulaski.
+Deer Creek Marsh:43.598861:-76.198056:hiking:1,195 acres of wetland and uplands between Lake Ontario and NYS Rte. 3 in town of Richland. Viewing tower, parking area, handicapped access. Scenic vistas, bird watching, cross-country skiing, snowshoeing.
+Derby Hill Bird Observatory:43.527972:-76.239056:hiking:Prime location for viewing migrating birds of prey and waterfowl. More than 40,000 counted annually. Owned by Onondaga Chapter of the NYS Audubon Society. Weather/hawk hotline, early March to late May: 315-963-8291. Off NYS Rte. 104B in Town of Mexico.
+Fallbrook Recreation Center:43.424444:-76.539417:hiking:Trails connect to Rice Creek Field Station trails, for a combined total of 20 miles of trails. 315-341-2106.
+Great Bear Springs Recreation Area:43.265861:-76.351611:hiking,biking:Comprised of 236 acres owned by the City of Fulton and the 78 acre Town of Volney Park.
+Happy Valley Wildlife Management Area:43.444056:-75.974306:hiking,biking:8,645 acres of uplands, wetlands, ponds. Hiking, birding, canoeing, cross-country skiing, snowshoeing. No off-road motor vehicles allowed.
+Hastings Town Park:43.374750:-76.152333:hiking:100 acres of park land, 3 miles of marked trails. 315-668-2456, 315-668-6191
+Independence Park:43.501861:-76.447917:hiking:The park, owned by Oswego County, has two miles of hiking trails, .8 mile of which are wheelchair accessible, on 47.3 acres adjacent to Lake Ontario. 315-349-3451.
+Klondike State Forest:43.369944:-75.984056:hiking:875 Acres.  5 miles of ungroomed trails. Surrounded by numerous ponds. Off NYS Rte. 69, corner of Tanner and Starks Rds., Amboy. 607-753-3095
+Littlejohn State Wildlife Management Area:43.645972:-75.881306:hiking:8,020 acres of uplands and wetlands, with 18.8 miles of trails. Hiking, birding, cross-country skiing, and snowshoeing.
+Mexico Point Park:43.522667:-76.259278:hiking:Nature trail. Medieval-style cottage open for tours by appointment. Off NYS Rte.104B. 315-963-8216 or 315-963-7657.
+Oswego County Forest Land:43.433806:-75.910472:hiking:There is a .75 mile trail on 112.36 acres. The property contains both pine plantations and naturally regenerated deciduous woods. The trail can be used in all four seasons.
+Oswego County Nature Park at Camp Zerbe:43.460889:-75.963028:hiking:Offers nature enthusiasts hundreds 364 acres of wilderness, and includes beautiful and unique glacier-made “kettlehole” lakes which attract a variety of wildlife. The park features 3 miles of marked nature trails, interpretive center, pavilion, educational exhibits, and a meeting center. Hiking, canoeing, birding, cross-country skiing, snowshoeing.  Camp Zerbe is open from dawn to dusk. The meeting center and interpretive center are open by appointment. Pets and motorized vehicles are not allowed in the park. For more information, call 315-349-3451.
+Oswego County Recreation Trail:43.304694:-76.348417:hiking,biking:26 miles. Ideal for hiking, biking, horseback riding, cross-country skiing, snowmobiling. Parking access at Co. Rte. 6, Volney.
+Oswego East and West Riverwalks:43.454778:-76.509083:hiking:Paved walkways stretch along both sides of the Oswego River from the harbor to Lock 7. The paths are connected by a pedestrian bridge that crosses the river near Utica Street.
+Rice Creek Biological Field Station:43.430111:-76.549389:hiking,biking:An instructional and research unit of the State University of New York College at Oswego, the state property consists of the 26-acre Rice Pond surrounded by 400 acres of land in several stages of growth from open fields to mature forests. Trails provide access to the various habitats around the station. The building contains two lab/classrooms, a lecture room, and exhibit areas with an indoor viewing gallery. Hiking, birding, exhibits, lectures and workshops. Rice Creek Field Station is open weekdays from 9 a.m. to 5 p.m. Trails are open from dawn to dusk. 315-312-7961
+Richard A. Noyes Bird Sanctuary:43.521028:-76.370500:hiking:Over two miles of trails on nearly 90 acres along Lake Ontario. The property is owned by the Onondaga Audubon Society.
+Salmon River Falls Unique Area:43.549167:-75.942778:hiking:110-foot waterfall provides a breathtaking view any time of the year. Areas of gorge are restricted and visitors should use extreme caution. Footpath to the bottom of the gorge open May 1 to Nov. 15. Owned by NYS DEC. 1.4 miles northeast of Co. Rte. 22. 315-298-7467.
+Sage Creek Trail:43.500694:-76.200444:hiking:The trail is an abandoned railroad right-of-way maintained for multi-use recreation. The trail begins at County Route 41 in the Town of Mexico and goes 4.7 mile north to Atkinson Road in the Town of Richland.
+Sandy Island Beach State Park:43.631250:-76.194694:hiking:11 acres of sandy beach on Lake Ontario. Part of the unique Eastern Lake Ontario Dune and Wetland System. Swimming, fishing, birding, hiking, canoeing, kayaking. 315-387-2657.
+Selkirk Shores State Park:43.564417:-76.207611:hiking,biking:980-acre multiple-use park overlooking Lake Ontario.  Swimming beach, camping, fishing, hiking, biking, snowshoeing, cross-country skiing, snowmobiling. Includes day-use picnic area, pavilions, nearby Pine Grove boat launch, and woodland trail. 315-298-5737.
+Three Mile Bay/Big Bay State Wildlife Management Area:43.258556:-76.124361:hiking:3,500-acre wetlands area. Hiking, boat access, birding, cross-country skiing, snowshoeing, hunting, fishing, trapping. 6 miles east of Central Square. Access from NYS Rte. 49 via Toad Harbor Road or Lower Road to Wheeler Road and West Road.
+Trout Brook State Forest:43.612778:-75.990417:hiking:3 miles of trails. 607-753-3095
+Winona State Forest Recreation Area:43.656806:-75.998861:hiking,biking:Winona Forest, located on the boundary of southern Jefferson County and northern Oswego County in Northern New York, is a 9,233-acre state forest that offers many recreational opportunities, including: snowmobiling, snowshoeing, hiking, cross-country skiing, mountain biking, hunting, fishing, trapping, dog sledding, bird watching and horseback riding.
+Winona Forest is one of the snowiest places east of the Rockies with an average snow fall of 250 inches per year! In winter, the prevailing westerly winds move cold winter air over the warm water of Lake Ontario producing massive lake effect snow falls on the Winona Forest in the Tug Hill area.
+Parking on north side of Center Road at Wart Road intersection and Bargy Road intersection, in Boylston. 315-286-0375; More information also available at www.tughillskiclub.com
+OW Tunnel:43.457778:-76.505194:walking: 
+Riverwalk Northeast:43.460333:-76.513333:walking: 
+Breitbeck Park West:43.460417:-76.526056:walking: 
+Fort Ontario:43.465889:-76.507833:walking: 
+Harbor Rail Trail:43.452833:-76.509361:walking: 
+Oswego Marina:43.462126:-76.517819:walking: 
+Oswego Maritime District:43.461861:-76.514611:walking: 
