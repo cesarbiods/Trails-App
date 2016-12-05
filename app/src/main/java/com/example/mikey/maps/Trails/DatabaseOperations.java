@@ -10,6 +10,7 @@ import android.util.Log;
 import com.example.mikey.maps.Trails.Trail;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -74,7 +75,8 @@ public class DatabaseOperations extends SQLiteOpenHelper {
         values.put(TRAIL_NAME, trail.getName());
         values.put(TRAIL_LATITUDE, trail.getLatitude());
         values.put(TRAIL_LONGITUDE, trail.getLongtitude());
-        values.put(TRAIL_ACTIVITY, trail.getType().toString());
+        System.out.println("adding type " + Arrays.toString(trail.getType()));
+        values.put(TRAIL_ACTIVITY, Arrays.toString(trail.getType()));
         values.put(TRAIL_DESCRIPTION, trail.getDescription());
 
         //inserting row
@@ -91,8 +93,12 @@ public class DatabaseOperations extends SQLiteOpenHelper {
         if(cursor != null){
             cursor.moveToFirst();
         }
+        System.out.println("cursor activity: " + cursor.getString(3));
+        String activity = cursor.getString(3);
+        activity = activity.replace("[","");
+        activity = activity.replace("]","");
         Trail trail = new Trail(cursor.getString(0),Double.parseDouble(cursor.getString(1)),
-                Double.parseDouble(cursor.getString(2)),cursor.getString(3), cursor.getString(4));
+                Double.parseDouble(cursor.getString(2)),activity.split(","), cursor.getString(4));
         return trail;
     }
     public List<Trail> getAllTrails(){
@@ -106,9 +112,13 @@ public class DatabaseOperations extends SQLiteOpenHelper {
         // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
             do {
+                System.out.println("cursor activity: " + cursor.getString(3));
                 //System.out.println("getting " + cursor.getString(1));
+                String activity = cursor.getString(3);
+                activity = activity.replace("[","");
+                activity = activity.replace("]","");
                 Trail trail = new Trail(cursor.getString(0),Double.parseDouble(cursor.getString(1)),
-                        Double.parseDouble(cursor.getString(2)),cursor.getString(3),
+                        Double.parseDouble(cursor.getString(2)),activity.split(","),
                         cursor.getString(4));
                 // Adding contact to list
                 trailList.add(trail);
@@ -119,42 +129,7 @@ public class DatabaseOperations extends SQLiteOpenHelper {
         return trailList;
 
     }
-    public List<Trail> getAllTrails(String paramiter){
-        List<Trail> trailList = new ArrayList<Trail>();
-        SQLiteDatabase db = this.getWritableDatabase();
-        if(paramiter.equals("A-Z")){
-            String selectQuery = "SELECT  * FROM " + TABLE_NAME;
-            Cursor cursor = db.query(TABLE_NAME,null, null, null, null, null, TRAIL_NAME);
-            if (cursor.moveToFirst()) {
-                do {
-                    //System.out.println("getting " + cursor.getString(1));
-                    Trail trail = new Trail(cursor.getString(0),Double.parseDouble(cursor.getString(1)),
-                            Double.parseDouble(cursor.getString(2)),cursor.getString(3),
-                            cursor.getString(4));
-                    // Adding contact to list
-                    trailList.add(trail);
-                } while (cursor.moveToNext());
-            }
-        }
-        else if(paramiter.equals("Z-A")){
-            String selectQuery = "SELECT  * FROM " + TABLE_NAME;
-            Cursor cursor = db.query(TABLE_NAME,null, null, null, null, null, TRAIL_NAME+"DESC");
-            if (cursor.moveToFirst()) {
-                do {
-                    //System.out.println("getting " + cursor.getString(1));
-                    Trail trail = new Trail(cursor.getString(0),Double.parseDouble(cursor.getString(1)),
-                            Double.parseDouble(cursor.getString(2)),cursor.getString(3),
-                            cursor.getString(4));
-                    // Adding contact to list
-                    trailList.add(trail);
-                } while (cursor.moveToNext());
-            }
-        }
 
-        // return contact list
-        return trailList;
-
-    }
 
 
 

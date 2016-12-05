@@ -47,6 +47,7 @@ public class TrailsList {
                 System.out.println("trails size after " + dop.getTrailsCount());
                 while ((line = bufferedReader.readLine()) != null) {
                     fields = line.split(":");
+                    //System.out.println("Activities" + fields[3]);
                     Trail tempTrail = new Trail(fields[0], fields[1], fields[2], fields[3], " ");
                     System.out.println("adding trail " + line);
                     dop.addTrail(tempTrail);
@@ -80,9 +81,5 @@ public class TrailsList {
         //System.out.println("trails first location " + trails.get(0).getLatitude() + ", " + trails.get(0).getLongtitude());
         return dop.getAllTrails();
     }
-    public List<Trail> getTrailList(String filter){
-        System.out.println("trails size " + dop.getTrailsCount());
-        //System.out.println("trails first location " + trails.get(0).getLatitude() + ", " + trails.get(0).getLongtitude());
-        return dop.getAllTrails(filter);
-    }
+
 }

@@ -7,8 +7,10 @@ import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Filter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -22,26 +24,48 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class trailsActivity extends ListActivity {
+public class trailsActivity extends Activity implements AdapterView.OnItemSelectedListener{
+    private TrailAdapter adapter;
+    private ListView listView;
+    Spinner mySpinner;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trails);
-        Spinner mySpinner = (Spinner) findViewById(R.id.spinner);
+        mySpinner = (Spinner) findViewById(R.id.spinner);
+        mySpinner.setOnItemSelectedListener(this);
+        listView = (ListView) findViewById(R.id.list);
+
         String filter = mySpinner.getSelectedItem().toString();
         TrailsList trails = new TrailsList(this);
-        ArrayList<Trail> trailList = (ArrayList<Trail>)trails.getTrailList(filter);
+        ArrayList<Trail> trailList = (ArrayList<Trail>)trails.getTrailList();
         System.out.println("Number of trails: " + trailList.size());
-        ArrayList<String> trailName = new ArrayList<String>();
-        for(Trail x: trailList){
-            trailName.add(x.getName());
-        }
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getListView().getContext(), android.R.layout.simple_list_item_1,trailName);
-        getListView().setAdapter(adapter);
+
+
+        adapter = new TrailAdapter(this, trailList);
+        listView.setAdapter(adapter);
     }
 
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        Trail trail = adapter.getItem(position);
+
+//Here we use the Filtering Feature which we implemented in our Adapter class.
+        adapter.getFilter().filter(mySpinner.getSelectedItem().toString(),new Filter.FilterListener() {
+            @Override
+            public void onFilterComplete(int count) {
+
+            }
+        });
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
 
 
 

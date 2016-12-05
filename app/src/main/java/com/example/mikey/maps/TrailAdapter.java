@@ -1,6 +1,7 @@
 package com.example.mikey.maps;
 
 import android.content.Context;
+import android.support.v7.util.SortedList;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,6 +38,7 @@ public class TrailAdapter extends BaseAdapter implements Filterable {
         mLayoutInflater = LayoutInflater.from(context);
     }
     public int getCount(){
+        System.out.println("trailsList size: " + trailList.size());
         return trailList.size();
     }
     public Trail getItem(int position){
@@ -90,7 +92,7 @@ public class TrailAdapter extends BaseAdapter implements Filterable {
 
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {
-
+        System.out.println("constraint: " + constraint);
         //below checks the match for the cityId and adds to the filterlist
             //long cityId= Long.parseLong(constraint.toString());
             FilterResults results = new FilterResults();
@@ -101,25 +103,76 @@ public class TrailAdapter extends BaseAdapter implements Filterable {
                         return result1.getName().compareTo(result2.getName());
                     }
                 });
-
-                results.count = filterList.size();
-                results.values = filterList;
+                //System.out.println("filteredList size " +filteredList.size());
+                results.count = filteredList.size();
+                results.values = filteredList;
 
             }
             else if(constraint.equals("Z-A")){
-
+                Collections.sort(filteredList, new Comparator<Trail>() {
+                    public int compare(Trail result1, Trail result2) {
+                        return result2.getName().compareTo(result1.getName());
+                    }
+                });
+                //System.out.println("filteredList size " +filteredList.size());
+                results.count = filteredList.size();
+                results.values = filteredList;
 
 
             }
             else if(constraint.equals("Hiking")){
+                filteredList = new ArrayList<Trail>();
+                for(Trail x: trailList){
+                    String[] activities = x.getType();
+                    System.out.println("activities " + activities[0]);
+                    for(int i = 0; i < activities.length;i++){
+                        if(activities[i].equals("hiking")){
+                            System.out.println("adding");
+                            filteredList.add(x);
+                        }
+                    }
+                }
 
+                Collections.sort(filteredList, new Comparator<Trail>() {
+                    public int compare(Trail result1, Trail result2) {
+                        return result1.getName().compareTo(result2.getName());
+                    }
+                });
+
+
+                results.count = filteredList.size();
+                results.values = filteredList;
             }
 
             else if(constraint.equals("Biking")){
+                filteredList = new ArrayList<Trail>();
+                for(Trail x: trailList){
+                    String[] activities = x.getType();
+                    for(int i = 0; i < activities.length;i++){
+                        if(activities[i].equals("biking")){
+                            filteredList.add(x);
+                        }
+                    }
+                }
 
+                Collections.sort(filteredList, new Comparator<Trail>() {
+                    public int compare(Trail result1, Trail result2) {
+                        return result1.getName().compareTo(result2.getName());
+                    }
+                });
+
+                results.count = filteredList.size();
+                results.values = filteredList;
             }
             else if(constraint.equals("Distance")){
+                Collections.sort(filteredList, new Comparator<Trail>() {
+                    public int compare(Trail result1, Trail result2) {
+                        return result1.getName().compareTo(result2.getName());
+                    }
+                });
 
+                results.count = filteredList.size();
+                results.values = filteredList;
             }
             return results;
         }

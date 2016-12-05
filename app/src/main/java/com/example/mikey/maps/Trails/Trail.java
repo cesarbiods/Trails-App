@@ -19,12 +19,14 @@ public class Trail {
         this.name = name;
         setLocation(latitude,longtitude);
         this.type = type.split(",");
+        //System.out.println(type);
         this.description = " ";
     }
     public Trail(String name, String latitude, String longtitude, String type, String description){
         this.name = name;
         setLocation(latitude,longtitude);
         this.type = type.split(",");
+        //System.out.println(type);
         this.description = description;
     }
 
@@ -33,15 +35,17 @@ public class Trail {
         this.latitude = latitude;
         this.longtitude = longtitude;
         this.type = type.split(",");
+        //System.out.println(type);
         this.description = " ";
     }
 
 
-    public Trail(String name, double latitude, double longtitude, String type, String description){
+    public Trail(String name, double latitude, double longtitude, String[] type, String description){
         this.name = name;
         this.latitude = latitude;
         this.longtitude = longtitude;
-        this.type = type.split(",");
+        this.type = type;
+        System.out.println(type);
         this.description = description;
     }
 
@@ -59,45 +63,6 @@ public class Trail {
         location.setLongitude(Double.parseDouble(longtitude));
 
         this.longtitude = Double.parseDouble(longtitude);
-        /*
-        char orentation;
-        //latitude parsing
-        //System.out.println(latitude);
-        String[] latTokens = latitude.split("°");
-        String newLat = latTokens[0] + "." + latTokens[1];
-        latTokens = newLat.split("\\'");
-        //System.out.println("latTokens index 0 "+ latTokens[0]);
-        newLat = latTokens[0]+latTokens[1];//this adds the lat without the last decmial
-        latTokens = newLat.split("\\.");
-        newLat = latTokens[0] + "." + latTokens[1];
-        orentation = latTokens[2].charAt(latTokens[2].length()-1);
-        if(orentation == 'S'){
-            newLat = "-" + newLat;
-        }
-        //System.out.println("new lat to be stored "+Double.parseDouble(newLat));
-        location.setLatitude(Double.parseDouble(newLat));
-        System.out.println(latitude);
-        System.out.println(Double.parseDouble(newLat));
-        this.latitude = Double.parseDouble(newLat);
-        //longitude parsing
-        String[] longTokens = longtitude.split("°");
-        String newLong = longTokens[0] + "." + longTokens[1];
-        longTokens = newLong.split("'");
-        newLong = longTokens[0] + longTokens[1];
-        longTokens = newLong.split("\\.");
-        //orentation = longTokens[1];
-        newLong = longTokens[0] + "." + longTokens[1];
-        //newLong = longTokens[0];//this adds the lat without the last decmial
-        orentation = longTokens[2].charAt(longTokens[2].length()-1);
-        if(orentation == 'W'){
-            newLong = "-" + newLong;
-        }
-        //System.out.println("new long to be stored " + Double.parseDouble(newLong));
-        location.setLongitude(Double.parseDouble(newLong));
-        System.out.println(longtitude);
-        System.out.println(Double.parseDouble(newLong));
-        this.longtitude = Double.parseDouble(newLong);
-        */
 
     }
     public double getLatitude(){
