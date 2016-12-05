@@ -97,6 +97,8 @@ public class DatabaseOperations extends SQLiteOpenHelper {
         String activity = cursor.getString(3);
         activity = activity.replace("[","");
         activity = activity.replace("]","");
+        activity = activity.trim();
+        activity = activity.replaceAll("\\s","");
         Trail trail = new Trail(cursor.getString(0),Double.parseDouble(cursor.getString(1)),
                 Double.parseDouble(cursor.getString(2)),activity.split(","), cursor.getString(4));
         return trail;
@@ -117,6 +119,8 @@ public class DatabaseOperations extends SQLiteOpenHelper {
                 String activity = cursor.getString(3);
                 activity = activity.replace("[","");
                 activity = activity.replace("]","");
+                activity = activity.trim();
+                activity = activity.replaceAll("\\s","");
                 Trail trail = new Trail(cursor.getString(0),Double.parseDouble(cursor.getString(1)),
                         Double.parseDouble(cursor.getString(2)),activity.split(","),
                         cursor.getString(4));

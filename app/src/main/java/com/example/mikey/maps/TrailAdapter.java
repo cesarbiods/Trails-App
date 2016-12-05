@@ -27,6 +27,7 @@ public class TrailAdapter extends BaseAdapter implements Filterable {
     private Context context;
     private LayoutInflater mLayoutInflater;
     private List<Trail> trailList;
+    private List<Trail> untouchedTrails;
     private List<Trail> filteredList;
     private TrailFilter trailFilter;
 
@@ -35,6 +36,7 @@ public class TrailAdapter extends BaseAdapter implements Filterable {
         this.context = context;
         this.trailList = values;
         this.filteredList = values;
+        this.untouchedTrails = values;
         mLayoutInflater = LayoutInflater.from(context);
     }
     public int getCount(){
@@ -98,6 +100,10 @@ public class TrailAdapter extends BaseAdapter implements Filterable {
             FilterResults results = new FilterResults();
 
             if (constraint.equals("A-Z")) {
+                trailList = untouchedTrails;
+                filteredList = trailList;
+                System.out.println("trails list length " +trailList.size());
+                System.out.println("filteredList length " + filteredList.size());
                 Collections.sort(filteredList, new Comparator<Trail>() {
                     public int compare(Trail result1, Trail result2) {
                         return result1.getName().compareTo(result2.getName());
@@ -109,6 +115,8 @@ public class TrailAdapter extends BaseAdapter implements Filterable {
 
             }
             else if(constraint.equals("Z-A")){
+                trailList = untouchedTrails;
+                filteredList=trailList;
                 Collections.sort(filteredList, new Comparator<Trail>() {
                     public int compare(Trail result1, Trail result2) {
                         return result2.getName().compareTo(result1.getName());
@@ -121,6 +129,7 @@ public class TrailAdapter extends BaseAdapter implements Filterable {
 
             }
             else if(constraint.equals("Hiking")){
+                trailList = untouchedTrails;
                 filteredList = new ArrayList<Trail>();
                 for(Trail x: trailList){
                     String[] activities = x.getType();
@@ -145,10 +154,12 @@ public class TrailAdapter extends BaseAdapter implements Filterable {
             }
 
             else if(constraint.equals("Biking")){
+                trailList = untouchedTrails;
                 filteredList = new ArrayList<Trail>();
                 for(Trail x: trailList){
                     String[] activities = x.getType();
                     for(int i = 0; i < activities.length;i++){
+                        System.out.println("activities " + activities[i]);
                         if(activities[i].equals("biking")){
                             filteredList.add(x);
                         }
@@ -164,13 +175,39 @@ public class TrailAdapter extends BaseAdapter implements Filterable {
                 results.count = filteredList.size();
                 results.values = filteredList;
             }
-            else if(constraint.equals("Distance")){
+            else if(constraint.equals("Walking")){
+                trailList = untouchedTrails;
+                filteredList = new ArrayList<Trail>();
+                for(Trail x: trailList){
+                    String[] activities = x.getType();
+                    for(int i = 0; i < activities.length;i++){
+                        System.out.println("activities " + activities[i]);
+                        if(activities[i].equals("walking")){
+                            filteredList.add(x);
+                        }
+                    }
+                }
+
                 Collections.sort(filteredList, new Comparator<Trail>() {
                     public int compare(Trail result1, Trail result2) {
                         return result1.getName().compareTo(result2.getName());
                     }
                 });
 
+                results.count = filteredList.size();
+                results.values = filteredList;
+            }
+            else if(constraint.equals("Distance")){
+                trailList = untouchedTrails;
+                filteredList=trailList;
+                System.out.println("trails list length " +trailList.size());
+                System.out.println("filteredList length " + filteredList.size());
+                Collections.sort(filteredList, new Comparator<Trail>() {
+                    public int compare(Trail result1, Trail result2) {
+                        return result1.getName().compareTo(result2.getName());
+                    }
+                });
+                //System.out.println("filteredList size " +filteredList.size());
                 results.count = filteredList.size();
                 results.values = filteredList;
             }
