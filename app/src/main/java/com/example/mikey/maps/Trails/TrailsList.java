@@ -46,9 +46,11 @@ public class TrailsList {
                 dop.onUpgrade(db, dop.getDatabase_version(), Integer.parseInt((line)));
                 System.out.println("trails size after " + dop.getTrailsCount());
                 while ((line = bufferedReader.readLine()) != null) {
+                    System.out.println("line " + line);
                     fields = line.split(":");
+                    System.out.println("number of fields: " + fields.length);
                     //System.out.println("Activities" + fields[3]);
-                    Trail tempTrail = new Trail(fields[0], fields[1], fields[2], fields[3], " ");
+                    Trail tempTrail = new Trail(fields[0], fields[1], fields[2], fields[3], fields[4]);
                     System.out.println("adding trail " + line);
                     dop.addTrail(tempTrail);
 
