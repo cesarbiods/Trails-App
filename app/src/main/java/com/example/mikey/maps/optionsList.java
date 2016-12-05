@@ -15,6 +15,11 @@ public class optionsList extends AppCompatActivity {
         setContentView(R.layout.activity_options_list);
     }
 
+    public void trailsClick(View view){
+        Intent intent = new Intent(this,trailsActivity.class);
+        startActivity(intent);
+    }
+
     public void weatherClick(View view) {
 
         Intent intent = new Intent(this, weatherUI.class);
