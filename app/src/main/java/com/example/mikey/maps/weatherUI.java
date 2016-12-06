@@ -1,5 +1,6 @@
 package com.example.mikey.maps;
 
+<<<<<<< HEAD
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
@@ -40,11 +41,18 @@ public class weatherUI extends AppCompatActivity {
     private TextView updated;
 
     Weather weather = new Weather();
+=======
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class weatherUI extends AppCompatActivity {
+>>>>>>> refs/remotes/origin/master
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather_ui);
+<<<<<<< HEAD
 
         cityName = (TextView) findViewById(R.id.cityText);
         iconView = (ImageView) findViewById(R.id.weatherIcon);
@@ -175,4 +183,7 @@ public class weatherUI extends AppCompatActivity {
     }
     //--- DownloadImage End ---//
 
+=======
+    }
+>>>>>>> refs/remotes/origin/master
 }
