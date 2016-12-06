@@ -2,6 +2,7 @@ package com.example.mikey.maps;
 
 import android.app.ListActivity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -15,6 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.mikey.maps.Trails.DatabaseOperations;
 import com.example.mikey.maps.Trails.Trail;
@@ -23,6 +25,7 @@ import com.example.mikey.maps.Trails.TrailsList;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Objects;
 
 public class trailsActivity extends Activity implements AdapterView.OnItemSelectedListener{
     private TrailAdapter adapter;
@@ -37,7 +40,6 @@ public class trailsActivity extends Activity implements AdapterView.OnItemSelect
         mySpinner = (Spinner) findViewById(R.id.spinner);
         mySpinner.setOnItemSelectedListener(this);
         listView = (ListView) findViewById(R.id.list);
-
         String filter = mySpinner.getSelectedItem().toString();
         TrailsList trails = new TrailsList(this);
         ArrayList<Trail> trailList = (ArrayList<Trail>)trails.getTrailList();
@@ -47,7 +49,23 @@ public class trailsActivity extends Activity implements AdapterView.OnItemSelect
 
         adapter = new TrailAdapter(this, trailList);
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+
+                Trail trail = (Trail) listView.getItemAtPosition(position);
+                Intent intent = new Intent(trailsActivity.this,TrailActivity.class);
+                intent.putExtra("com.package.Trail",trail);
+                startActivity(intent);
+
+            }
+        });
+
     }
+
+
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {

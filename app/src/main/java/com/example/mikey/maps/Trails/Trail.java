@@ -1,12 +1,16 @@
 package com.example.mikey.maps.Trails;
 
 import android.location.Location;
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.util.Arrays;
 
 /**
  * Created by Workstation2.0 on 11/9/2016.
  */
 
-public class Trail {
+public class Trail implements Parcelable {
     String name;
     double latitude;
     double longtitude;
@@ -48,6 +52,41 @@ public class Trail {
         System.out.println(type);
         this.description = description;
     }
+    public Trail(Parcel in){
+        this.name = in.readString();
+        this.latitude = in.readDouble();
+        this.longtitude = in.readDouble();
+        this.type = in.readString().split(",");
+        this.description = in.readString();
+
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.name);
+        dest.writeDouble(this.latitude);
+        dest.writeDouble(this.longtitude);
+        dest.writeString(Arrays.toString(this.type));
+        dest.writeString(this.description);
+    }
+
+
+    public static final Parcelable.Creator<Trail> CREATOR = new Parcelable.Creator<Trail>() {
+
+        public Trail createFromParcel(Parcel in) {
+            return new Trail(in);
+        }
+
+        public Trail[] newArray(int size) {
+            return new Trail[size];
+        }
+    };
 
 
     public String getName(){

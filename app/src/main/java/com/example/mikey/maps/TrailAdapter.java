@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.example.mikey.maps.Trails.Trail;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -54,13 +55,12 @@ public class TrailAdapter extends BaseAdapter implements Filterable {
     public View getView(int position, View view, ViewGroup parent){
         View updateView;
         ViewHolder holder;
-        RecyclerView.ViewHolder viewHolder;
         if(view == null){
             updateView = mLayoutInflater.inflate(R.layout.trail_listitem,null);
             holder = new ViewHolder();
 
             holder.name = (TextView) updateView.findViewById(R.id.name);
-            holder.description = (TextView) updateView.findViewById(R.id.description);
+            holder.activity = (TextView) updateView.findViewById(R.id.activity);
 
             updateView.setTag(holder);
         }else{
@@ -68,13 +68,18 @@ public class TrailAdapter extends BaseAdapter implements Filterable {
             holder = (ViewHolder) updateView.getTag();
         }
         final Trail item = getItem(position);
+            String activities = Arrays.toString(item.getType());
+            activities = activities.replace("[","");
+            activities = activities.replace("]","");
             holder.name.setText(item.getName());
-            holder.description.setText(item.getDescription());
+            holder.activity.setText("Activities: " + activities);
 
         return updateView;
 
 
     }
+
+
     @Override
     public Filter getFilter() {
         if (trailFilter == null) {
@@ -85,7 +90,7 @@ public class TrailAdapter extends BaseAdapter implements Filterable {
 
     static class ViewHolder{
         TextView name;
-        TextView description;
+        TextView activity;
     }
 
 
@@ -102,8 +107,8 @@ public class TrailAdapter extends BaseAdapter implements Filterable {
             if (constraint.equals("A-Z")) {
                 trailList = untouchedTrails;
                 filteredList = trailList;
-                System.out.println("trails list length " +trailList.size());
-                System.out.println("filteredList length " + filteredList.size());
+                //System.out.println("trails list length " +trailList.size());
+                //System.out.println("filteredList length " + filteredList.size());
                 Collections.sort(filteredList, new Comparator<Trail>() {
                     public int compare(Trail result1, Trail result2) {
                         return result1.getName().compareTo(result2.getName());
@@ -200,8 +205,8 @@ public class TrailAdapter extends BaseAdapter implements Filterable {
             else if(constraint.equals("Distance")){
                 trailList = untouchedTrails;
                 filteredList=trailList;
-                System.out.println("trails list length " +trailList.size());
-                System.out.println("filteredList length " + filteredList.size());
+                //System.out.println("trails list length " +trailList.size());
+                //System.out.println("filteredList length " + filteredList.size());
                 Collections.sort(filteredList, new Comparator<Trail>() {
                     public int compare(Trail result1, Trail result2) {
                         return result1.getName().compareTo(result2.getName());
