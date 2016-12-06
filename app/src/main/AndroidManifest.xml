@@ -45,23 +45,19 @@
         </activity>
         <activity
             android:name=".MapsActivity"
-<<<<<<< HEAD
             android:label="@string/title_activity_maps" />
-=======
-            android:label="@string/title_activity_maps"></activity>
->>>>>>> refs/remotes/origin/master
+            android:label="@string/title_activity_maps">
         <!--
  ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
         -->
-        >>>>>>> refs/remotes/origin/master
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
         <activity android:name=".optionsList" />
-<<<<<<< HEAD
         <activity android:name=".weatherUI" />
+
         <activity
             android:name=".cameraActivity"
             android:label="@string/title_activity_camera"
@@ -85,16 +81,13 @@
             android:name="com.facebook.FacebookContentProvider"
             android:authorities="com.facebook.app.FacebookContentProvider1584671128490867"
             android:exported="true" />
-        >>>>>>> refs/remotes/origin/master
         <activity
             android:name=".trailsActivity"
             android:label="@string/title_activity_trails" />
         <activity
             android:name=".TrailActivity"
             android:label="@string/title_activity_trail"></activity>
-=======
-        <activity android:name=".weatherUI"></activity>
->>>>>>> refs/remotes/origin/master
     </application>
+
 
 </manifest>

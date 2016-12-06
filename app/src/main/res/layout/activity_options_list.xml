@@ -44,20 +44,18 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:id="@+id/faceButton"
         android:text="Facebook"
         android:onClick="faceClick"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:elevation="0dp" />
-=======
+
         android:layout_marginTop="66dp"
         android:id="@+id/button8"
         android:layout_below="@+id/button7"
         android:layout_alignStart="@+id/button7"
         android:text="Weather"
         android:onClick="onClick" />
->>>>>>> refs/remotes/origin/master
 
 </RelativeLayout>
