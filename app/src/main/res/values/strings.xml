@@ -30,5 +30,6 @@
         <item>Walking</item>
         <item>Distance</item>
     </string-array>
+    <string name="title_activity_trail">TrailActivity</string>
 
 </resources>

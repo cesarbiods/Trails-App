@@ -83,7 +83,10 @@
         >>>>>>> refs/remotes/origin/master
         <activity
             android:name=".trailsActivity"
-            android:label="@string/title_activity_trails"></activity>
+            android:label="@string/title_activity_trails" />
+        <activity
+            android:name=".TrailActivity"
+            android:label="@string/title_activity_trail"></activity>
     </application>
 
 </manifest>
