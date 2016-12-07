@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Filter;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.example.mikey.maps.Trails.DatabaseOperations;
 import com.example.mikey.maps.Trails.Trail;
@@ -53,7 +54,7 @@ public class trailsActivity extends Activity implements AdapterView.OnItemSelect
 
             }
         });
-
+        search = (EditText) findViewById(R.id.search);
         search.addTextChangedListener(new TextWatcher() {
 
             @Override
