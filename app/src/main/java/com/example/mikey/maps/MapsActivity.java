@@ -140,7 +140,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //mMap.moveCamera(CameraUpdateFactory.newLatLng(oswego));
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> refs/remotes/origin/master
 
     @Override
     public void onInfoWindowClick(final Marker marker) {
@@ -155,6 +158,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         }
     }
+<<<<<<< HEAD
 
 
 //    public void onSearch(View view)
@@ -182,6 +186,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //        }
 //
 //    }
+=======
+>>>>>>> refs/remotes/origin/master
 
     public void listOptions(View view){
         Intent intent = new Intent(this, optionsList.class);
