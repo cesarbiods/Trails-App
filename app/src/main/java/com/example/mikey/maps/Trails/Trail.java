@@ -24,7 +24,7 @@ public class Trail implements Parcelable {
         this.name = name;
         setLocation(latitude,longtitude);
         this.type = type.split(",");
-        System.out.println(type);
+        //System.out.println(type);
         this.description = description;
     }
 
@@ -36,10 +36,10 @@ public class Trail implements Parcelable {
         this.latitude = latitude;
         this.longtitude = longtitude;
         this.type = type;
-        System.out.println(type);
-        for(String x: type){
-            System.out.println(x);
-        }
+        //System.out.println(type);
+        //for(String x: type){
+            //System.out.println(x);
+        //}
         this.description = description;
     }
     public Trail(Parcel in){

@@ -26,6 +26,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
@@ -82,9 +83,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
        // mMap.addMarker(new MarkerOptions().position(a).title(trailList.get(0).name));
         for(Trail x: trailList){
             //System.out.println("adding " + x.getName() + " trail");
-            mMap.addMarker(new MarkerOptions().position(new LatLng(x.getLatitude(), x.getLongtitude())).title(x.getName()));
+            String activity = Arrays.toString(x.getType());
+            activity = activity.replace("[","");
+            activity = activity.replace("]","");
+            mMap.addMarker(new MarkerOptions().position(new LatLng(x.getLatitude(),
+                    x.getLongtitude())).title(x.getName() + ": " + activity));
         }
-        System.out.println("trail list length " + trailList.size());
+        //System.out.println("trail list length " + trailList.size());
 
         // Add a marker in Sydney and move the camera
         //LatLng oswego = new LatLng(43.4553, -76.5105);
