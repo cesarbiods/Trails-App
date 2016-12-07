@@ -3,8 +3,11 @@ package com.example.mikey.maps;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.Filter;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -17,7 +20,8 @@ import java.util.ArrayList;
 public class trailsActivity extends Activity implements AdapterView.OnItemSelectedListener{
     private TrailAdapter adapter;
     private ListView listView;
-    Spinner mySpinner;
+    private Spinner mySpinner;
+    private EditText search;
 
 
     @Override
@@ -47,6 +51,23 @@ public class trailsActivity extends Activity implements AdapterView.OnItemSelect
                 intent.putExtra("com.package.Trail",trail);
                 startActivity(intent);
 
+            }
+        });
+
+        search.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // Call back the Adapter with current character to Filter
+                adapter.getFilter().filter(s.toString());
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count,int after) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
             }
         });
 
