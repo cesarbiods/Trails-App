@@ -6,35 +6,35 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical">
 
-
-
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.example.mikey.maps.MapsActivity" />
+        tools:context="com.example.mikey.maps.MapsActivity" >
 
-    <android.support.design.widget.FloatingActionButton
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right|top"
-        android:clickable="true"
-        android:focusable="false"
-        map:fabSize="mini"
-        map:srcCompat="@android:drawable/ic_menu_camera"
-        android:id="@+id/floatingActionButton"
-        android:onClick="go"/>
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            android:clickable="true"
+            android:focusable="false"
+            map:fabSize="mini"
+            map:srcCompat="@android:drawable/ic_menu_camera"
+            android:id="@+id/floatingActionButton"
+            android:onClick="go"/>
 
 
-    <LinearLayout
+
+        <LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
 
+
         <Button
             android:text="Map Type"
-            android:layout_width="117dp"
+            android:layout_width="match_parent"
             android:onClick="changeType"
             android:layout_height="wrap_content"
             android:id="@+id/Btype" />
@@ -45,8 +45,10 @@
             android:id="@+id/button2"
             android:onClick="listOptions"/>
 
+
+
     </LinearLayout>
 
-
+    </fragment>
 
 </RelativeLayout>
