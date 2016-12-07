@@ -139,11 +139,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setMyLocationEnabled(true);
         //mMap.moveCamera(CameraUpdateFactory.newLatLng(oswego));
     }
-
-<<<<<<< HEAD
-
-=======
->>>>>>> refs/remotes/origin/master
+    
 
     @Override
     public void onInfoWindowClick(final Marker marker) {
@@ -158,36 +154,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         }
     }
-<<<<<<< HEAD
 
-
-//    public void onSearch(View view)
-//    {
-//        float zoomLevel = (float) 16.0;
-//        EditText location_tf = (EditText)findViewById(R.id.TFaddress);
-//        String location = location_tf.getText().toString();
-//        List<Address> addressList = null;
-//
-//        if(!location.isEmpty() || !location.equals("")){
-//            Geocoder geocoder = new Geocoder(this);
-//            try {
-//               addressList = geocoder.getFromLocationName(location , 1);
-//
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//
-//            android.location.Address address = addressList.get(0);
-//            LatLng latlng = new LatLng(address.getLatitude(),address.getLongitude());
-//            mMap.addMarker(new MarkerOptions().position(latlng).title(location));
-//            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latlng, zoomLevel));
-//        } else {
-//
-//        }
-//
-//    }
-=======
->>>>>>> refs/remotes/origin/master
 
     public void listOptions(View view){
         Intent intent = new Intent(this, optionsList.class);
