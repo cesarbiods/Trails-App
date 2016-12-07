@@ -21,6 +21,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -86,11 +87,27 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             String activity = Arrays.toString(x.getType());
             activity = activity.replace("[","");
             activity = activity.replace("]","");
-            mMap.addMarker(new MarkerOptions().position(new LatLng(x.getLatitude(),
-                    x.getLongtitude())).title(x.getName() + ": " + activity));
+            String[] actities = activity.split(",");
+
+            if(actities[0].equals("hiking")) {
+                mMap.addMarker(new MarkerOptions().position(new LatLng(x.getLatitude(),
+                        x.getLongtitude()))
+                        .title(x.getName() + ": " + activity)
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.man_in_hike)));
+            }else if(actities[0].equals("biking")){
+                mMap.addMarker(new MarkerOptions().position(new LatLng(x.getLatitude(),
+                        x.getLongtitude()))
+                        .title(x.getName() + ": " + activity)
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.bicycle_rider)));
+            }else{
+                mMap.addMarker(new MarkerOptions().position(new LatLng(x.getLatitude(),
+                        x.getLongtitude()))
+                        .title(x.getName() + ": " + activity)
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.pedestrian_walking)));
+            }
+
         }
         //System.out.println("trail list length " + trailList.size());
-
         // Add a marker in Sydney and move the camera
         //LatLng oswego = new LatLng(43.4553, -76.5105);
         //mMap.addMarker(new MarkerOptions().position(oswego).title("Oswego, NY"));
