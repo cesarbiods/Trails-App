@@ -139,7 +139,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setMyLocationEnabled(true);
         //mMap.moveCamera(CameraUpdateFactory.newLatLng(oswego));
     }
-    
+
 
     @Override
     public void onInfoWindowClick(final Marker marker) {
@@ -154,7 +154,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         }
     }
-
 
     public void listOptions(View view){
         Intent intent = new Intent(this, optionsList.class);
