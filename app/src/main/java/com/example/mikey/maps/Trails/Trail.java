@@ -19,29 +19,16 @@ public class Trail implements Parcelable {
     String[] type;
     String description;
 
-    public Trail(String name, String latitude, String longtitude, String type){
-        this.name = name;
-        setLocation(latitude,longtitude);
-        this.type = type.split(",");
-        //System.out.println(type);
-        this.description = " ";
-    }
+
     public Trail(String name, String latitude, String longtitude, String type, String description){
         this.name = name;
         setLocation(latitude,longtitude);
         this.type = type.split(",");
-        //System.out.println(type);
+        System.out.println(type);
         this.description = description;
     }
 
-    public Trail(String name, double latitude, double longtitude, String type){
-        this.name = name;
-        this.latitude = latitude;
-        this.longtitude = longtitude;
-        this.type = type.split(",");
-        //System.out.println(type);
-        this.description = " ";
-    }
+
 
 
     public Trail(String name, double latitude, double longtitude, String[] type, String description){
@@ -50,6 +37,9 @@ public class Trail implements Parcelable {
         this.longtitude = longtitude;
         this.type = type;
         System.out.println(type);
+        for(String x: type){
+            System.out.println(x);
+        }
         this.description = description;
     }
     public Trail(Parcel in){

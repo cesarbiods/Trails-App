@@ -17,7 +17,6 @@ import android.widget.EditText;
 
 import com.example.mikey.maps.Trails.DatabaseOperations;
 import com.example.mikey.maps.Trails.Trail;
-import com.example.mikey.maps.Trails.TrailsList;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -28,20 +27,24 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
-import com.facebook.FacebookSdk;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     static final int CAM_REQUEST = 1;
-
+    Bundle extras;
+    float zoomLevel;
+    LatLng zoomLocation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+        Intent intent = getIntent();
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
+        extras = intent.getExtras();
+
         mapFragment.getMapAsync(this);
     }
 
@@ -53,23 +56,32 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
     }
 
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        float zoomLevel = (float) 10.0;
-        LatLng oswego = new LatLng(43.4553, -76.5105);
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(oswego, zoomLevel));
+        if (extras != null) {
+            Trail selectedTrail = extras.getParcelable("com.package.Trail");
+            zoomLevel = (float) 15.0;
+            zoomLocation = new LatLng(selectedTrail.getLatitude(),selectedTrail.getLongtitude());
+
+        }else {
+            zoomLevel = (float) 10.0;
+             zoomLocation = new LatLng(43.4553, -76.5105);
+        }
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(zoomLocation, zoomLevel));
 
 
-        TrailsList trails = new TrailsList(this);
+
         DatabaseOperations data = new DatabaseOperations(this);
-        List<Trail> trailList = trails.getTrailList();
+        data.populateDatabase(this);
+        List<Trail> trailList = data.getAllTrails();
         LatLng a = new LatLng(trailList.get(0).getLatitude(), trailList.get(0).getLongtitude());
-        System.out.println("Latitude" + trailList.get(1).getLatitude());
-        System.out.println("Longitude" + trailList.get(1).getLongtitude());
+        //System.out.println("Latitude" + trailList.get(1).getLatitude());
+        //System.out.println("Longitude" + trailList.get(1).getLongtitude());
        // mMap.addMarker(new MarkerOptions().position(a).title(trailList.get(0).name));
         for(Trail x: trailList){
-            System.out.println("adding " + x.getName() + " trail");
+            //System.out.println("adding " + x.getName() + " trail");
             mMap.addMarker(new MarkerOptions().position(new LatLng(x.getLatitude(), x.getLongtitude())).title(x.getName()));
         }
         System.out.println("trail list length " + trailList.size());

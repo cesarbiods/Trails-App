@@ -15,6 +15,7 @@ import com.example.mikey.maps.Weather.Model.Weather;
 import com.example.mikey.maps.Weather.data.JSONWeatherParser;
 import com.example.mikey.maps.Weather.data.WeatherHTTPClient;
 import com.example.mikey.maps.Weather.utils.Utils;
+import com.google.android.gms.maps.model.LatLng;
 
 import org.apache.http.client.HttpClient;
 
@@ -38,6 +39,7 @@ public class weatherUI extends AppCompatActivity {
     private TextView sunrise;
     private TextView sunset;
     private TextView updated;
+    LatLng oswego;
 
     Weather weather = new Weather();
 
@@ -45,7 +47,6 @@ public class weatherUI extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather_ui);
-
         cityName = (TextView) findViewById(R.id.cityText);
         iconView = (ImageView) findViewById(R.id.weatherIcon);
         temp = (TextView) findViewById(R.id.tempText);
@@ -64,6 +65,7 @@ public class weatherUI extends AppCompatActivity {
         weatherTask.execute(city +"&units=imperial");
 
     }
+
     private class WeatherTask extends AsyncTask<String,Void,Weather>{
 
 
